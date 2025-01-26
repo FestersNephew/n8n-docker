@@ -1,20 +1,9 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx
-
-### OSX ###
-# General
+# Ignore macOS system files
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
 Icon
-
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -22,18 +11,26 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
 
-# End of https://www.toptal.com/developers/gitignore/api/osx
+# Ignore sensitive files and Docker volumes
+.env                  # Environment variables (do NOT commit secrets)
+env/                  # Any other env-related directories
+.n8n                  # n8n workflows and persistent data
+postgres-data/        # PostgreSQL data volume
 
+# Ignore temporary or large files
+*.tar.gz              # Backup archives
+*.sql.gz              # Database backups
+tmp/                  # Temporary directory
+charts/               # Chart files (if generated and not part of the source)
+summaries/            # Summaries (if generated and not part of the source)
 
-.n8n
-
-# Database volume folder
-postgres-data
+# Node.js (if applicable)
+node_modules/         # Dependencies for JavaScript/Node.js (if you ever add them)
+npm-debug.log*        # npm debug log files
+yarn-error.log*       # Yarn error log files
